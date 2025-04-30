@@ -10,7 +10,7 @@ source:
   sha256: fdb57a45b8c64bfd15dafeaa3db12f4510ee2577366f87d6fc1b39e8a3c15645
 
 build:
-  number: 0
+  number: 1
   python_version_independent: true
   skip: true  # [is_abi3 and not is_python_min]
   ignore_run_exports:
