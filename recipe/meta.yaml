@@ -39,11 +39,11 @@ test:
     - llguidance
   commands:
     - pip check
-    - abi3audit                      # [is_abi3]
-  requires:
-    - pip
     - abi3audit $SP_DIR/llguidance.abi3.so -s -v --assume-minimum-abi3 {{ python_min }}   # [unix and is_abi3]
     - abi3audit %SP_DIR%/llguidance.pyd -s -v --assume-minimum-abi3 {{ python_min }}      # [win and is_abi3]
+  requires:
+    - pip
+    - abi3audit                      # [is_abi3]
 
 about:
   home: https://github.com/guidance-ai/llguidance
