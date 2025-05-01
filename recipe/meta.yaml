@@ -10,8 +10,8 @@ source:
   sha256: fdb57a45b8c64bfd15dafeaa3db12f4510ee2577366f87d6fc1b39e8a3c15645
 
 build:
-  number: 1
-  python_version_independent: true
+  number: 2
+  python_version_independent: true  # [is_abi3]
   skip: true  # [is_abi3 and not is_python_min]
   ignore_run_exports:
     from_package:
@@ -39,8 +39,11 @@ test:
     - llguidance
   commands:
     - pip check
+    - abi3audit                      # [is_abi3]
   requires:
     - pip
+    - abi3audit $SP_DIR/llguidance.abi3.so -s -v --assume-minimum-abi3 {{ python_min }}   # [unix and is_abi3]
+    - abi3audit %SP_DIR%/llguidance.pyd -s -v --assume-minimum-abi3 {{ python_min }}      # [win and is_abi3]
 
 about:
   home: https://github.com/guidance-ai/llguidance
