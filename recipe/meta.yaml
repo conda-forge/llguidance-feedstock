@@ -1,5 +1,5 @@
 {% set name = "llguidance" %}
-{% set version = "0.7.19" %}
+{% set version = "0.7.20" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: fdb57a45b8c64bfd15dafeaa3db12f4510ee2577366f87d6fc1b39e8a3c15645
+  sha256: a265093bd36684ffc6b961ad889cc73de15425ad4fa77f5b8b4fe99faec2da2f
 
 build:
-  number: 2
+  number: 0
   python_version_independent: true  # [is_abi3]
   skip: true  # [is_abi3 and not is_python_min]
   ignore_run_exports:
