@@ -1,5 +1,5 @@
 {% set name = "llguidance" %}
-{% set version = "1.5.1" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 39095f380f4dc0ac6c2d4f60dfabddd10977b8a102e7bed790436b909b43af7f
+  sha256: 01611f85f834725fb359b568673cfaa5a352423779c097b03aa5ce68f0db3a51
 
 build:
   number: 0
