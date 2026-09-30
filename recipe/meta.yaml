@@ -1,13 +1,13 @@
 {% set name = "llguidance" %}
-{% set version = "1.8.0" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 18d1579eabb040e65c870d50c6df19a7bef140c5260d12ad35b7f0dc446312e0
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 0e1310908535ea90fd4128a50a72fb7d0e3403e34c3c4e33f6e7f87ecd169e95
 
 build:
   number: 0
